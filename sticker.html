@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/sticker.css" />
+  </head>
+  <body>
+    <h1 id="titulo">Puedes llevar 10 stickers en total</h1>
+    <hr />
+    <div class="naruto1">
+      <img width="150px" height="100px" src="./assets/img/naruto1.jpg" alt="imagen-1-naruto" />
+      <input id="sticker1" type="text" />
+    </div>
+    <hr />
+    <div class="naruto1">
+      <img width="150px" height="100px" src="./assets/img/naruto2.jpg" alt="imagen-2-naruto" />
+
+      <input  id="sticker2" type="text" />
+    </div>
+    <hr />
+    <div class="naruto1">
+      <img width="150px" height="100px" src="./assets/img/naruto3.jpg" alt="imagen-3-naruto" />
+
+      <input id="sticker3" type="text" />
+    </div>
+    <hr />
+    <button id="calculo1">calcular el total</button>
+    <p id="parrafo"></p>
+    <script>
+      // PRIMER EJERCICIO DEL DESAFIO- CALCULAR EL TOTAL-
+      const s1 = document.querySelector("#sticker1");
+      const s2 = document.querySelector("#sticker2");
+      const s3 = document.querySelector("#sticker3");
+      const btn1 = document.querySelector("#calculo1");
+      let p1 = document.querySelector("#parrafo");
+
+      btn1.addEventListener("click", function () {
+        const total = Number(s1.value) + Number(s2.value) + Number(s3.value);
+
+        if (isNaN(total)) {
+          alert("debes ingresar solo numeros");
+        } else if (total > 10) {
+          p1.textContent = "llevas demasiados stickers";
+        } else{
+            p1.textContent = "llevas" + "" + total + "" + "stickers"
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Ingresa el password</h2>
+    <div style="display: flex ; align-content: center;">
+      <select name="digito1" id="digito1">
+        <option value="0">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="digito2" id="digito2">
+        <option value="0">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="digito3" id="digito3">
+        <option value="0">-</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <button id="calculo2">INGRESAR</button>
+    <p id="resultado"></p>
+    <script>
+      const d1 = document.querySelector("#digito1");
+      const d2 = document.querySelector("#digito2");
+      const d3 = document.querySelector("#digito3");
+      const btn3 = document.querySelector("#calculo2");
+      const resultado = document.querySelector("#resultado");
+
+      btn3.addEventListener("click", function () {
+        let total = d1.value + d2.value + d3.value;
+        if (total == 911) {
+          resultado.textContent = "primera contraseña ok";
+        } else if (total == 714) {
+          resultado.textContent = "segunda contraseña ok";
+        } else {
+          resultado.textContent = "contraseña incorrecta";
+        }
+      });
+    </script>
+  </body>
+</html>

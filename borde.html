@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agrega un borde</title>
+    <style>
+      .activo {
+        border: 2px solid red;
+      }
+      body{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HAZ CLICK EN LA IMAGEN</h1>
+    <button id="cambioBorder">
+      <img width="100px" src="./assets/img/naruto1.jpg" alt="" />
+    </button>
+    <script>
+      const btn2 = document.querySelector("#cambioBorder");
+      btn2.addEventListener("click", function () {
+        if (btn2.classList.contains("activo")) {
+          btn2.classList.remove("activo");
+        } else {
+          btn2.classList.add("activo");
+        }
+      });
+    </script>
+  </body>
+</html>
